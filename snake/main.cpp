@@ -24,21 +24,18 @@ void backgroundSetup(const int nx, const int ny, int* bg ){
 }
 
 void add_snake( int* snake,int*  bg, int snl,const int& nx, const int& ny ){
-  /*
-    your code here
-  */
+    // met le nouveau serpent en entier dans background
+
 }
 
 void remove_snake(int* snake,int* bg,int& snl,const int nx, const int ny){
-  /*
-    your code here
-  */
+    // vire tout sauf la pomme
+ 
 }
 
 void snake_movement(char key, int* dxdy){
-  /*
-    your code here
-  */
+    // remplit dxdy en fonction de key
+  
 }
 
 bool verifyBorder( int* snake, const int nx, const int ny ){
@@ -59,10 +56,9 @@ void setupSnake( int* snake, int snake_len ){
     }
 }
 
-void update_snake_coordinates(int* snake, int snl, int* cdxdy ){
-  /*
-    your code here
-  */
+void update_snake_coordinates(int* snake, int snl, int* dxdy ){
+    // met dans snake les nouvelles coordonnées
+ 
 }
 
 void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snake, int* bg){
