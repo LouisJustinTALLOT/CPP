@@ -9,43 +9,43 @@
 #include "food.h"
 
 
-void backgroundSetup( /* your code here */ ){
+void backgroundSetup(const int nx, const int ny, int* background ){             
   /*
     your code here
   */
 }
 
-void add_snake( /* your code here */ ){
+void add_snake( int* snake,int*  bg, int snl,const int& nx, const int& ny ){
   /*
     your code here
   */
 }
 
-void remove_snake( /* your code here */ ){
+void remove_snake(int* snake,int* bg,int& snl,const int nx, const int ny){
   /*
     your code here
   */
 }
 
-void snake_movement( /* your code here */ ){
+void snake_movement(char key, int* dxdy){
   /*
     your code here
   */
 }
 
-bool verifyBorder( /* your code here */ ){
+bool verifyBorder( int* snake, const int nx, const int ny ){
   /*
     your code here
   */
 }
 
-void setupSnake( /* your code here */ ){
+void setupSnake( int* snake, int snake_len ){
   /*
     your code here
   */
 }
 
-void update_snake_coordinates( /* your code here */ ){
+void update_snake_coordinates(int* snake, int snl, int* cdxdy ){
   /*
     your code here
   */
