@@ -9,10 +9,18 @@
 #include "food.h"
 
 
-void backgroundSetup(const int nx, const int ny, int* background ){             
-  /*
-    your code here
-  */
+void backgroundSetup(const int nx, const int ny, int* bg ){             
+
+    for (int i = 0; i < nx ; i++){
+        for(int j = 0; j < ny; j++){
+            if (i == 0 or i+1 == nx){
+                bg[i + j * nx] = 1;
+            }
+            if (j == 0 or j+1 == ny){
+                bg[i + j * nx] = 1;
+            }
+      }
+    }
 }
 
 void add_snake( int* snake,int*  bg, int snl,const int& nx, const int& ny ){
