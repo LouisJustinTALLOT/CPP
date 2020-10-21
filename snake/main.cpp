@@ -53,9 +53,10 @@ bool verifyBorder( int* snake, const int nx, const int ny ){
 }
 
 void setupSnake( int* snake, int snake_len ){
-  /*
-    your code here
-  */
+    for(int i =0; i < snake_len; i++){
+        snake[i] = i + 4;
+        snake[ i + SNAKE_LEN ] = 4;
+    }
 }
 
 void update_snake_coordinates(int* snake, int snl, int* cdxdy ){
