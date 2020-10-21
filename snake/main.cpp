@@ -42,9 +42,14 @@ void snake_movement(char key, int* dxdy){
 }
 
 bool verifyBorder( int* snake, const int nx, const int ny ){
-  /*
-    your code here
-  */
+    // retourne true si le serpent est sorti, false si il est toujours dans les bornes
+    if (snake[0] <= 0 or snake[0] >= nx-1){
+        return true;
+    }
+    if (snake[SNAKE_LEN] <= 0 or snake[SNAKE_LEN] >= ny-1){
+        return true;
+    }
+    return false;
 }
 
 void setupSnake( int* snake, int snake_len ){
@@ -77,7 +82,7 @@ void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snak
         printFrame(nx, ny, bg);
         remove_snake(snake, bg, snl, nx, ny);
         bool out =  verifyBorder(snake, nx, ny);
-        if( out == false){
+        if( out == true){   // le serpent est alors sorti de l'aire définie
             std::cerr << "" << std::endl;
             exit(1);
         }
