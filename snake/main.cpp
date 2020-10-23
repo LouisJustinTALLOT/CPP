@@ -35,7 +35,32 @@ void remove_snake(int* snake,int* bg,int& snl,const int nx, const int ny){
 
 void snake_movement(char key, int* dxdy){
     // remplit dxdy en fonction de key
-  
+    // attention c'est inversé car l'axe des y est descendant
+    if (key == 'z'){
+        // on va en haut
+        dxdy[0] = 0;
+        dxdy[1] = -1;
+    }
+    else if (key ==  's'){
+        // on va en bas
+        dxdy[0] = 0;
+        dxdy[1] = 1;
+    }
+    else if (key == 'q'){
+        // on va à gauche
+        dxdy[0] = -1;
+        dxdy[1] = 0;
+    }
+    else if (key == 'd'){
+        // on va à droite 
+        dxdy[0] = 1; 
+        dxdy[1] = 0;
+    }
+    else if (key == 'm'){
+        // on décide de sortir du jeu
+        std::cerr << "" << std::endl;
+            exit(1);
+    }
 }
 
 bool verifyBorder( int* snake, const int nx, const int ny ){
