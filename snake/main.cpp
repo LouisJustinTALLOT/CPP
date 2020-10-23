@@ -33,8 +33,12 @@ void add_snake( int* snake,int*  bg, int snl,const int& nx, const int& ny ){
 
 void remove_snake(int* snake,int* bg,int& snl,const int nx, const int ny){
     // vire tout sauf la pomme
-    // on va juste parcourir le tableau bg en remplaçant les 1 par des -1 ...
- 
+    // on va juste parcourir le tableau bg en remplaçant les 3 par des -1 ...
+    for (int i = 0; i < nx * ny; i++ ){
+        if (bg[i] == 3){
+            bg[i] = -1;   // on remplace un endroit où il y a un serpent par du blanc
+        }
+    }
 }
 
 void snake_movement(char key, int* dxdy){
