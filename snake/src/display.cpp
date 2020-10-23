@@ -20,6 +20,9 @@ void printFrame(const int& nx, const int& ny, const int* bg){
             else if( bg[i+j*nx] == 2 ){
                 std::cout << "@" ; 
             }    
+            else if( bg[i+j*nx] == 3 ){
+                std::cout << "o" ; 
+            } 
             else{
                 std::cout << " ";
             }
