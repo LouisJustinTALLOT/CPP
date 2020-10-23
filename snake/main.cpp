@@ -25,11 +25,15 @@ void backgroundSetup(const int nx, const int ny, int* bg ){
 
 void add_snake( int* snake,int*  bg, int snl,const int& nx, const int& ny ){
     // met le nouveau serpent en entier dans background
-
+    for (int i = 0; i < SNAKE_LEN; i++){
+        bg[snake[i] + snake[i + SNAKE_LEN] * nx] = 3; // on met un serpent aux bons endroits
+    }     
 }
+
 
 void remove_snake(int* snake,int* bg,int& snl,const int nx, const int ny){
     // vire tout sauf la pomme
+    // on va juste parcourir le tableau bg en remplaçant les 1 par des -1 ...
  
 }
 
