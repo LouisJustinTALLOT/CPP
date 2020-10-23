@@ -91,7 +91,15 @@ void setupSnake( int* snake, int snake_len ){
 
 void update_snake_coordinates(int* snake, int snl, int* dxdy ){
     // met dans snake les nouvelles coordonnées
- 
+    for (int i  = snl; i >= 1; i--){
+        // on décale toutes les cases sauf la dernière que l'on écrase
+        snake[i] = snake[i-1]; 
+        snake[i + SNAKE_LEN] = snake[i + SNAKE_LEN -1];
+    }
+
+    // puis on update la première avec dxdy
+    snake[0] = snake[0] + dxdy[0];
+    snake[SNAKE_LEN] = snake[SNAKE_LEN] + dxdy[1];
 }
 
 void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snake, int* bg){
