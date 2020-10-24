@@ -161,6 +161,11 @@ void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snak
         bool eat = eatFood(food, snake);
         if(eat){
             createFood(bg, food, nx, ny);
+
+            print_chiffre(food[0]);
+            print_chiffre(food[1]);
+            test_debug("new_food");
+
             snl++;
         }
         update_snake_coordinates(snake, snl, dxdy);
@@ -171,9 +176,9 @@ void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snak
 
 
 int main(){
-    const int nx = 50;
-    const int ny = 25;
-    const int lap=200;    
+    const int nx = 150;
+    const int ny = 35;
+    const int lap=25;    
     int snake_len = 3;
     int background[nx*ny] ;
 
