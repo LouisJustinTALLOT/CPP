@@ -11,6 +11,8 @@
 #include <cstdio>
 #include <string>
 
+// fonctions de débug :
+/*
 void test_debug(char * chaine = "ici"){
     printf(chaine);
     printf("\n");
@@ -20,18 +22,12 @@ void test_debug(char * chaine = "ici"){
 void print_chiffre(int chiffre){
     std::cout << std::to_string(chiffre) << std::endl;
 }
-void print_chiffre(double chiffre){
-    std::cout << std::to_string(chiffre) << std::endl;
-}
+*/
 
 void backgroundSetup(const int nx, const int ny, int* bg ){             
 
     for (int i = 0; i < nx ; i++){
         for(int j = 0; j < ny; j++){
-           
-        //    print_chiffre(i);
-        //    print_chiffre(j);
-
             if (i == 0 or i+1 == nx){
                 bg[i + j * nx] = 1;
             }
@@ -46,11 +42,8 @@ void backgroundSetup(const int nx, const int ny, int* bg ){
 void add_snake( int* snake,int*  bg, int snl,const int nx, const int ny ){
     // met le nouveau serpent en entier dans background
 
-    // test_debug("dans add snake");
-
-    for (int i = 0; i < snl; i++){
-        bg[snake[i] + snake[i + SNAKE_LEN] * nx] = 3; // on met un serpent aux bons endroits
-        // print_chiffre(i);
+    for (int i = 0; i < snl; i++){   // ATTENTION C'EST BIEN snl ET PAS SNAKE_LEN
+        bg[snake[i] + snake[i + SNAKE_LEN] * nx] = 3; // on met un serpent aux bons endroits   
     }     
 }
 
@@ -111,7 +104,6 @@ void setupSnake( int* snake, int snake_len ){
         snake[i] = i + 4;
         snake[ i + SNAKE_LEN ] = 4;
     }
-    // test_debug("setupsnake"); // ok ça marche aussi
 }
 
 void update_snake_coordinates(int* snake, int snl, int* dxdy ){
@@ -133,24 +125,14 @@ void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snak
     int food[2] = {0,0};
 
     createFood( bg, food, nx, ny );
-
-    // test_debug("après create food"); // c'est bon
-
     while( true ){
         internal::frameSleep(lap);
         if( internal::keyEvent() ){
             std::cin >> key; 
             snake_movement(key, dxdy);
         }
-
-        // test_debug("après mouvment"); // c'est bon
-
         backgroundClear();
-        // test_debug("après bg_clear"); //c'est bon
-
         add_snake( snake, bg, snl, nx, ny );
-        // test_debug("après add snake");
-
         printFrame(nx, ny, bg);
         remove_snake(snake, bg, snl, nx, ny);
         bool out =  verifyBorder(snake, nx, ny);
@@ -161,11 +143,6 @@ void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snak
         bool eat = eatFood(food, snake);
         if(eat){
             createFood(bg, food, nx, ny);
-
-            print_chiffre(food[0]);
-            print_chiffre(food[1]);
-            test_debug("new_food");
-
             snl++;
         }
         update_snake_coordinates(snake, snl, dxdy);
@@ -174,34 +151,22 @@ void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snak
 }
 
 
-
 int main(){
     const int nx = 150;
     const int ny = 35;
-    const int lap=25;    
+    const int lap= 40;    
     int snake_len = 3;
     int background[nx*ny] ;
-
-    // printf("là \n");
  
     for( int i=0; i<nx*ny; i++){
-        // std::cout<<i<<"\n";
         background[i] = -1;
     }
-    int snake[2*SNAKE_LEN];
 
-    // std::cin.get(); 
-    // printf("début \n");
-    // test_debug("teeeeeest");
+    int snake[2*SNAKE_LEN];
 
     backgroundSetup(nx, ny, background);
 
-  
-    // printFrame(nx, ny, background);
-    // test_debug("bg setup fait"); // ok ça ça marche
-
     setupSnake(snake, snake_len);
-    // test_debug("après setup snake"); // on arrive bien là :)
 
     startGame(lap, nx, ny, snake_len, snake, background);
 
