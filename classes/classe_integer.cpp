@@ -1,12 +1,12 @@
 #include <iostream>
 #include <stdexcept>
 
-
+/*
 class Integer {
 
 public:
 
-  Integer (const int& x, const int& a, const int& b ) : value(x), a(a), b(b){
+  Integer (const int& x, const int& aa = -1000, const int& bb = 1000 ) : value(x), a(aa), b(bb){
     if (x<a or x>b){
       throw std::runtime_error("valeur de x pas dans les bornes");
       // std::cout << "erreur" << std::endl;
@@ -45,9 +45,9 @@ private:
 }; // attention ';' obligatoire en fin de déclaration de classe !
 
 // la class Integer est définie
-
+*/
 int main(){
-
+  /*
   Integer i(13, 0, 100);
   i.print();
 
@@ -56,7 +56,7 @@ int main(){
 
   i.decr();
   i.print();
-
+  */
   return 0;
 
 }

@@ -1,5 +1,9 @@
 CXX=g++
 CXXFLAGS=-Wall
-all: classes1
+all: classe_integer classe_intstack
 
-classes1 : classes1.cpp
+classe_integer : classe_integer.cpp
+classe_intstack : classe_intstack.cpp
+clean :
+	rm classe_integer
+	rm classe_intstack
