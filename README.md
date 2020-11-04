@@ -12,4 +12,4 @@ Les dossiers sont les suivants:
 | `NPI` |Implémentation de la **notation polonaise inversée** (NPI) |
 | `snake`| Jeu de **snake** basique implémenté dans la console `bash`|
 |`gestion_memoire` | Apprentissage de la gestion de la mémoire : `heap`, `new` et `delete` |
-|`classes` |Les classes en `C++`, avec une classe basique `Integer` et un modèle de pile `Instack` |
+|`classes` |Les classes en `C++`, avec une classe basique `Integer` et un modèle de pile `Intstack` |
