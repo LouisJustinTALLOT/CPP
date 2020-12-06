@@ -24,8 +24,7 @@ void print_chiffre(int chiffre){
 }
 */
 
-void backgroundSetup(const int nx, const int ny, int* bg ){             
-
+void backgroundSetup(const int nx, const int ny, int* bg ){
     for (int i = 0; i < nx ; i++){
         for(int j = 0; j < ny; j++){
             if (i == 0 or i+1 == nx){
@@ -146,7 +145,6 @@ void startGame(const int& lap, const int& nx, const int& ny, int& snl, int* snak
             snl++;
         }
         update_snake_coordinates(snake, snl, dxdy);
-
     }
 }
 
@@ -169,8 +167,4 @@ int main(){
     setupSnake(snake, snake_len);
 
     startGame(lap, nx, ny, snake_len, snake, background);
-
 }
-
-
-
