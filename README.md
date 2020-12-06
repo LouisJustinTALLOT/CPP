@@ -2,6 +2,7 @@
 
 Ce dépôt `GitHub` regroupe ma programmation en C++ excepté peut-être les plus gros projets.
 
+[![CodeFactor : qualité du code](https://www.codefactor.io/repository/github/louisjustintallot/cpp/badge)](https://www.codefactor.io/repository/github/louisjustintallot/cpp)
 
 Les dossiers sont les suivants: 
 
