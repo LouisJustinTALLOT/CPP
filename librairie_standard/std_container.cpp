@@ -5,3 +5,8 @@
 // std::stack
 //std::queue
 
+#include <array>
+#include <vector>
+#include <iostream> 
+#include <set>
+#include <map>
