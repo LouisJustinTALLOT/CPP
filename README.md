@@ -14,3 +14,4 @@ Les dossiers sont les suivants:
 | [`snake`](https://github.com/LouisJustinTALLOT/CPP/tree/master/snake)| Jeu de **snake** basique implémenté dans la console `bash`|
 |[`gestion_memoire`](https://github.com/LouisJustinTALLOT/CPP/tree/master/gestion_memoire) | Apprentissage de la gestion de la mémoire : `heap`, `new` et `delete` |
 |[`classes`](https://github.com/LouisJustinTALLOT/CPP/tree/master/classes) |Les classes en `C++`, avec une classe basique `Integer` et un modèle de pile `Intstack` |
+|[`librairie_standard`](https://github.com/LouisJustinTALLOT/CPP/tree/master/librairie_standrad) |La librairie standard de `C++` |
