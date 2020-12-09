@@ -30,6 +30,13 @@ int main(){
 
     std::cout<<file_in.eof()<<std::endl; 
 
+    // fichier binaire
+
+    std::ofstream file_out_bin; 
+    file_out_bin.open("output.bin", std::ios::out | std::ios::binary);
+    file_out_bin.write((char*)"TEst aufgeihojfa");
+    file_out_bin.close();
+
 
     return 0;
 }
