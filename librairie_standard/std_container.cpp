@@ -56,5 +56,24 @@ int main(){
         std::cout<< x<<std::endl;
 
     }
+
+    std::cout<< "==============="<<std::endl;
+
+
+    std::vector<int> vec = {2,3,5,6,7,3,25,2,4,6,5,7};
+    std::set<int> vec2set;
+
+    for(auto x: vec){
+        vec2set.insert(x);
+    }
+
+    std::cout<<vec2set.size()<<std::endl;
+
+    for(auto x:vec2set){
+
+        std::cout<< x<<std::endl;
+
+    }
+
     return 0;
 }
