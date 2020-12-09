@@ -12,6 +12,7 @@
 #include <map>
 
 
+
 class Integer {
 
 private:
@@ -75,5 +76,23 @@ int main(){
 
     }
 
+    std::cout<< "==============="<<std::endl;
+
+    std::map<int, double> map1;
+    map1[10] = 273.1;
+    map1[12] = 97.23;
+
+    std::cout<< map1[10]<<std::endl;
+    std::cout<< map1[143]<<std::endl;
+    std::cout<< "========="<<std::endl;
+
+
+    std::map<int, double>::iterator itm;
+
+    for (itm = map1.begin(); itm != map1.end(); itm++){
+
+    std::cout<< itm->first << "->" << itm->second << std::endl;
+    }
+    
     return 0;
 }
