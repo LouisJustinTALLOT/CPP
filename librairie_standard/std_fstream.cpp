@@ -1,4 +1,6 @@
 #include <fstream>
+#include <iostream>
+#include <string> // optionnel en fait
 
 int main(){
     // Ecriture
