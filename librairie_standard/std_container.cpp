@@ -14,7 +14,6 @@
 
 
 class Integer {
-
 private:
     int _value;
     int _min;
@@ -37,7 +36,6 @@ public:
     bool operator<(const Integer& other) const {
         return this->_value < other._value ;
     }
-
 };
 
 int main(){
