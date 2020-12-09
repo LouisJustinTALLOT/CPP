@@ -19,5 +19,27 @@ int main(){
         std::cout <<"pas ok" <<std::endl;
     }
 
+    // sort
+    for (auto x:vec){
+        std::cout <<x<<std::endl;
+    }
+    std::cout <<"-----------------"<<std::endl;
+
+    std::sort(vec.begin(), vec.end());
+
+    for (auto x:vec){
+        std::cout <<x<<std::endl;
+    }
+   
+    std::cout <<"-----------------"<<std::endl;
+
+    std::sort(vec.begin(), vec.end(), [](const int& a, const int& b){
+        return a>b;
+    });
+
+    for (auto x:vec){
+        std::cout <<x<<std::endl;
+    }
+
     return 0;    
 }
