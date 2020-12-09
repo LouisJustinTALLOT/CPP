@@ -1,8 +1,9 @@
 CXX = g++
 CXXFLAGS = -Wall 
-all : container
 
-container : std_container.cpp
+all : std_container
+
+std_container : std_container.cpp
 
 clean :
 	rm container
