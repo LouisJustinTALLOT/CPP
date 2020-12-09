@@ -49,13 +49,11 @@ int main(){
     vector1.push_back(100);
 
     for (int i=0; i<vector1.size(); i++){
-
         std::cout<< "vector1["<<i<<"] = "<<vector1[i]<<std::endl;
     }
 
     for (auto x:vector3){
         std::cout<< x<<std::endl;
-
     }
 
     std::cout<< "==============="<<std::endl;
@@ -71,9 +69,7 @@ int main(){
     std::cout<<vec2set.size()<<std::endl;
 
     for(auto x:vec2set){
-
         std::cout<< x<<std::endl;
-
     }
 
     std::cout<< "==============="<<std::endl;
@@ -90,7 +86,6 @@ int main(){
     std::map<int, double>::iterator itm;
 
     for (itm = map1.begin(); itm != map1.end(); itm++){
-
     std::cout<< itm->first << "->" << itm->second << std::endl;
     }
     
