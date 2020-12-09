@@ -41,5 +41,16 @@ int main(){
         std::cout <<x<<std::endl;
     }
 
+
+    std::cout <<"-----------------"<<std::endl;
+    std::for_each(vec.begin(), vec.end(), [](int& x){
+        x+=1;
+    });
+
+    int sum=0;
+    std::for_each(vec.begin(), vec.end(), [&sum](int& x){
+        sum += x;
+    });
+    std::cout<<"Somme = "<<sum<<std::endl;
     return 0;    
 }
