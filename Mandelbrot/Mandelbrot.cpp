@@ -1,7 +1,7 @@
 #include <iostream>
-#include <math>
+#include <cmath>
 #include <fstream>
-
+#include <vector>
 
 // Nous allons tracer la fractale de Mandelbrot au format .ppm
 // et le sauvegarder en mode binaire
