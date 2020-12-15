@@ -16,7 +16,11 @@
 
 //};
 
+std::vector<double> carre_complexe(std::vector<double>& z){
+    std::vector<double> res = {z[0]*z[0] - z[1]*z[1], 2*z[0]*z[1]};
 
+    return res;
+}
 
 
 int est_dedans(double& x, double& y){
