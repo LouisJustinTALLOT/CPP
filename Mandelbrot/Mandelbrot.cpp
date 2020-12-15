@@ -60,3 +60,31 @@ std::vector<int> getColor(int niter, int itermax ){
   }
   return col;
 }
+
+
+int main(){
+
+    int N = 100;
+
+    for (int i=0; i<N; i++){
+        double x = -2. + 2.5/N;
+    
+        for (int j=0; j<N; j++){
+            double y = -1.25 + 2.5/N;
+
+            std::vector<int> couleur = getColor(est_dedans(x, y), 100);
+
+            // puis faire l'affichage.....
+            // la suite demain
+
+
+
+        }
+    }
+
+
+
+
+
+    return 0;
+}
