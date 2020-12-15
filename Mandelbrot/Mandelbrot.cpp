@@ -6,12 +6,15 @@
 // Nous allons tracer la fractale de Mandelbrot au format .ppm
 // et le sauvegarder en mode binaire
 
-class Complex{ // de la forme a+bi
-private:
-    double a;
-    double b;
-public:
-    Complex(const double& x, const double& y): a(x), b(y) {}
+
+//class Complex{ // de la forme a+bi
+//private:
+    //double a;
+    //double b;
+//public:
+    //Complex(const double& x, const double& y): a(x), b(y) {}
+
+//};
 
 
 
