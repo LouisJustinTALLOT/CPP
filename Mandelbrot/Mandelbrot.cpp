@@ -75,10 +75,10 @@ int main(){
    
     file_out.open("fractale_mandelbrot_1.ppm", std::ios::out | std::ios::binary);
     for (int i=0; i<N; i++){
-        double x = -2. + 2.5/N;
+        double y = -1.25 + 2.5/N*i;
     
         for (int j=0; j<N; j++){
-            double y = -1.25 + 2.5/N;
+            double x = -2. + 2.5/N*j;
 
             std::vector<int> couleur = getColor(est_dedans(x, y), 100);
 
