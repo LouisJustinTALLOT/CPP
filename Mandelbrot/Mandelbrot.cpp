@@ -41,8 +41,9 @@ int est_dedans(double& x, double& y){
     std::vector<double> c = {x, y};
     
     for(int k = 0; k<100; k++){
-        z[0] = carre_complexe(z)[0] + c[0];
-        z[1] = carre_complexe(z)[1] + c[1];
+        std::vector<double> carre_z = carre_complexe(z);
+        z[0] = carre_z[0] + c[0];
+        z[1] = carre_z[1] + c[1];
         if(z[0]*z[0] + z[1]*z[1] > 4){
             return k;
         }
