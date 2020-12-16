@@ -74,6 +74,15 @@ int main(){
     std::ofstream file_out;
    
     file_out.open("fractale_mandelbrot_1.ppm", std::ios::out | std::ios::binary);
+
+    file_out.write("P3\n",3);
+    std::string str_N = std::to_string(N);
+    file_out.write(str_N.c_str(), str_N.size());
+    file_out.write(" ", 1);
+    file_out.write(str_N.c_str(), str_N.size());
+    file_out.write("\n", 1);
+    file_out.write("255\n", 4);
+
     for (int i=0; i<N; i++){
         double y = -1.25 + 2.5/N*i;
     
