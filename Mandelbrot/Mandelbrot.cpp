@@ -82,14 +82,13 @@ int main(){
 
             std::vector<int> couleur = getColor(est_dedans(x, y), 100);
 
-            // puis faire l'affichage.....
-            // la suite demain
-
-
-
+            for (int a = 0; a<3; a++){
+                std::string valeur = std::to_string(couleur[a]);
+                file_out.write(valeur.c_str(),valeur.size());
+                file_out.write(" ", 1);
+            }
         }
-    }
-
+        
 
 
 
