@@ -69,7 +69,7 @@ std::vector<int> getColor(int niter, int itermax ){
 
 int main(){
 
-    int N = 100;
+    int N = 5000;
 
     std::ofstream file_out;
    
