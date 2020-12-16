@@ -71,6 +71,9 @@ int main(){
 
     int N = 100;
 
+    std::ofstream file_out;
+   
+    file_out.open("fractale_mandelbrot_1.ppm", std::ios::out | std::ios::binary);
     for (int i=0; i<N; i++){
         double x = -2. + 2.5/N;
     
@@ -91,5 +94,6 @@ int main(){
 
 
 
+    file_out.close();
     return 0;
 }
