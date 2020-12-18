@@ -6,6 +6,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <string>
+#include <ctime>
 
 // Nous allons tracer la fractale de Mandelbrot au format .ppm
 // et le sauvegarder en mode binaire
@@ -102,5 +103,6 @@ int main(){
     }
 
     file_out.close();
+    std::cout<< "Cela a pris "<<std::time(nullptr)-depart<<" secondes"<<std::endl;
     return 0;
 }
