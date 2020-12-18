@@ -27,7 +27,7 @@ std::vector<double> carre_complexe(std::vector<double>& z){
 }
 
 
-int est_dedans(double& x, double& y){
+int est_dedans(double& x, double& y, int itermax){
     double p = sqrt((x-0.25)*(x-0.25) + y*y);
 
     if(x < p -2 * p * p + 0.25){
@@ -54,14 +54,14 @@ int est_dedans(double& x, double& y){
 std::vector<int> getColor(int niter, int itermax ){
   std::vector<int> col(3);
   if ( niter < itermax ){
-    col[0] = 0;//200+(55*niter)/100;
-    col[1] = 255*niter/itermax;
-    col[2] = 0;//(230*(100-niter))/100 ;
+    col[0] = 200+(55*niter)/100;
+    col[1] = (230*(100-niter))/100;
+    col[2] = (230*(100-niter))/100 ;
   }
   else{
     col[0] = 0;
     col[1] = 255;
-    col[2] = 0;
+    col[2] = 255;
   }
   return col;
 }
