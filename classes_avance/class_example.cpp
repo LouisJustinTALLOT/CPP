@@ -79,3 +79,44 @@ void fake(const int& s){
     // st.delete_stack(); // marche mais pas très naturel
 
 }
+
+
+int main(){
+    // fake(10);
+
+    // Integer i(10);
+    // i.print();
+    // Integer* pi = new Integer(12);
+    // pi->print();
+    // delete pi;
+
+    
+    int a = 10;
+    int b=a ;
+    IntStack st(10);
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    IntStack st2=st;
+    //ou
+    // Instack st2(st);
+
+    st.print();
+    st2.print();
+
+    st2.pop();
+    st2.push(17);
+    
+    st.print();
+    st2.print();
+
+    st.address();
+    st2.address(); //pb : ils pointent vers la même adresse
+    // et en plus on essaye de détruire 2 fois le même
+    
+    
+    
+    
+    
+    return 0;
+}
