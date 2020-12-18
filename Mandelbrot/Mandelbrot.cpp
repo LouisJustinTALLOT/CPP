@@ -54,14 +54,14 @@ int est_dedans(double& x, double& y){
 std::vector<int> getColor(int niter, int itermax ){
   std::vector<int> col(3);
   if ( niter < itermax ){
-    col[0] = 200+(55*niter)/100;
-    col[1] = (230*(100-niter))/100;
-    col[2] = (230*(100-niter))/100 ;
+    col[0] = 0;//200+(55*niter)/100;
+    col[1] = 255*niter/itermax;
+    col[2] = 0;//(230*(100-niter))/100 ;
   }
   else{
     col[0] = 0;
     col[1] = 255;
-    col[2] = 255;
+    col[2] = 0;
   }
   return col;
 }
