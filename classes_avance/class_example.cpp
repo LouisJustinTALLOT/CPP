@@ -72,3 +72,10 @@ class Integer{
 
 };
 
+void fake(const int& s){
+
+    IntStack st(s); //on perd un bout de mémoire
+    //.....
+    // st.delete_stack(); // marche mais pas très naturel
+
+}
