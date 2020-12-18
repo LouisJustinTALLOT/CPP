@@ -41,7 +41,7 @@ int est_dedans(double& x, double& y, int itermax){
     std::vector<double> z = {0.,0.};
     std::vector<double> c = {x, y};
     
-    for(int k = 0; k<100; k++){
+    for(int k = 0; k<itermax; k++){
         std::vector<double> carre_z = carre_complexe(z);
         z[0] = carre_z[0] + c[0];
         z[1] = carre_z[1] + c[1];
@@ -55,22 +55,25 @@ int est_dedans(double& x, double& y, int itermax){
 std::vector<int> getColor(int niter, int itermax ){
   std::vector<int> col(3);
   if ( niter < itermax ){
-    col[0] = 200+(55*niter)/100;
-    col[1] = (230*(100-niter))/100;
-    col[2] = (230*(100-niter))/100 ;
+    col[0] = 0;//200+(55*niter)/100;
+    col[1] = 255*niter/itermax;
+    col[2] = 0;//(230*(100-niter))/100 ;
   }
   else{
     col[0] = 0;
     col[1] = 255;
-    col[2] = 255;
+    col[2] = 0;
   }
   return col;
 }
 
 
 int main(){
+    int itermax = 100;
 
-    int N = 5000;
+    std::cout<<"Début du programme"<<std::endl;
+    std::time_t depart = std::time(nullptr);
+    int N = 2000;
 
     std::ofstream file_out;
    
@@ -90,7 +93,7 @@ int main(){
         for (int j=0; j<N; j++){
             double x = -2. + 2.5/N*j;
 
-            std::vector<int> couleur = getColor(est_dedans(x, y), 100);
+            std::vector<int> couleur = getColor(est_dedans(x, y, itermax), itermax);
 
             for (int a = 0; a<3; a++){
                 std::string valeur = std::to_string(couleur[a]);
