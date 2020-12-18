@@ -15,3 +15,5 @@ Les dossiers sont les suivants:
 |[`gestion_memoire`](https://github.com/LouisJustinTALLOT/CPP/tree/master/gestion_memoire) | Apprentissage de la gestion de la mémoire : `heap`, `new` et `delete` |
 |[`classes`](https://github.com/LouisJustinTALLOT/CPP/tree/master/classes) |Les classes en `C++`, avec une classe basique `Integer` et un modèle de pile `Intstack` |
 |[`librairie_standard`](https://github.com/LouisJustinTALLOT/CPP/tree/master/librairie_standard) |La librairie standard de `C++` |
+|[`classe_avance`](https://github.com/LouisJustinTALLOT/CPP/tree/master/classe_avance) |Les classes en `C++` avec destructeur, `friend`, et une implémentation des listes doublement chaînées|
+|[`Mandelbrot`](https://github.com/LouisJustinTALLOT/CPP/tree/master/Mandelbrot) |Tracé de la fractale de Mandelbrot en passant par des images `.ppm`|
