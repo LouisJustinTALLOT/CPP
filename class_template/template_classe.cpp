@@ -1,5 +1,20 @@
 #include <iostream>
+#include <string>
 
+template<typename T>
+std::string getType(){
+    return "undefined";
+}
+
+template<>
+std::string getType<int>(){
+    return "int";
+}
+
+template<>
+std::string getType<double>(){
+    return "double";
+}
 
 template<typename T>
 class Number{
@@ -17,6 +32,7 @@ class Number{
             this->_value = x;
         }
         void info(){
+            std::cout<< getType<T>() <<std::endl;
             std::cout<< this->_value <<std::endl;
         }
 
