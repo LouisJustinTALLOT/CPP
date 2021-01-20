@@ -28,9 +28,10 @@ class Number{
             return this->_value;
         }
 
-        void set (const T& x){
-            this->_value = x;
-        }
+        void set (const T& x);
+        // {
+            // this->_value = x;
+        // }
         void info(){
             std::cout<< getType<T>() <<std::endl;
             std::cout<< this->_value <<std::endl;
