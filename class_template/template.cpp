@@ -18,6 +18,15 @@ void printVector(const std::vector<T> a){
     std::cout<<std::endl;
 }
 
+template<typename T1, typename T2>
+void printVector2(const T1 b, const std::vector<T2> a){
+    std::cout<<b<<std::endl;
+    for (T2 x:a){
+        std::cout<<x<<" > ";
+    }
+    std::cout<<std::endl;
+}
+
 
 int main(){
     // double a, b, c;
@@ -39,6 +48,9 @@ int main(){
 
     printVector<double,6>(v1);
     printVector<int, 3>(v2);
+    std::cout<<"-----------------"<<std::endl;
+    printVector2(2,v1);
+    printVector2("coucou", v2);
 
 
     return 0;
