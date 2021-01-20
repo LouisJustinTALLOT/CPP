@@ -1,9 +1,11 @@
 CXX = g++
 CXXFLAGS = -Wall 
 
-all : class_example test_friend correction_Basile_double_linked liste_doublement_chainee
+all : class_example test_friend correction_Basile_double_linked liste_doublement_chainee class_heritage
 
 class_example : class_example.cpp
+
+class_heritage : class_heritage.cpp
 
 test_friend : test_friend.cpp
 
@@ -16,3 +18,4 @@ clean:
 	rm class_example
 	rm liste_doublement_chainee
 	rm correction_Basile_double_linked
+	rm class_heritage
