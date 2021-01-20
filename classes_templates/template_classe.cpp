@@ -42,6 +42,11 @@ class Number{
         }
 };
 
+template<typename T>
+void Number<T>::set(const T& x){
+    this->_value = x;
+}
+
 int main(){
     Number <double> a(0.25);
     Number<int> b(10);
