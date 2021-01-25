@@ -1,0 +1,3 @@
+[submodule "projet-CPP-Morse"]
+	path = projet-CPP-Morse
+	url = ./projet-CPP-Morse/
