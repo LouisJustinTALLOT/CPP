@@ -1,28 +1,27 @@
 #include <iostream>
-#include <array>
+#include <vector>
 
-#define GRID_TYPE std::array<std::array<int, GRID_SIZE_X>, GRID_SIZE_Y>
-#define GRID_SIZE_X 4
-#define GRID_SIZE_Y 2
+#define GRID_SIZE_X 1000
+#define GRID_SIZE_Y 3000
 
 // g++ game_of_life.cpp -o game_of_life
+
+
+int old_grid[GRID_SIZE_Y][GRID_SIZE_X];
+int new_grid[GRID_SIZE_Y][GRID_SIZE_X];
+
 
 // il nous faut une vieille et une nouvelle grille
 
 int main(){
 
-    // std::array<std::array<int, GRID_SIZE_X>, GRID_SIZE_Y> main_grid;
-    GRID_TYPE main_grid;
-
 
     for (int i=0; i<GRID_SIZE_Y; i++){
         for (int j=0; j<GRID_SIZE_X; j++){
-            // std::cout<< main_grid[j][i]<<"|";
-            std::cout<< 0 <<"|";
+            old_grid[j][i] = 0;
+            new_grid[j][i] = 0;
         }
-        std::cout << std::endl;
     }
-    // std::cout<<main_grid[0][1]<<std::endl;
 
     return 0;
 }
