@@ -26,6 +26,29 @@ int decision(int somme_environnante, int etat_actuel){
     }
 }
 
+
+void game_of_life(){
+    // on va calculer la nouvelle grille puis échanger
+
+    for (int i=0; i<GRID_SIZE_Y; i++){
+        for (int j=0; j<GRID_SIZE_X; j++){
+            int sum = old_grid[j][(i-1)%GRID_SIZE_Y]
+                    + old_grid[j][(i+1)%GRID_SIZE_Y]
+                    + old_grid[(j-1)%GRID_SIZE_X][i] 
+                    + old_grid[(j+1)%GRID_SIZE_X][i] 
+                    + old_grid[(j-1)%GRID_SIZE_X][(i-1)%GRID_SIZE_Y] 
+                    + old_grid[(j+1)%GRID_SIZE_X][(i+1)%GRID_SIZE_Y] 
+                    + old_grid[(j-1)%GRID_SIZE_X][(i+1)%GRID_SIZE_Y] 
+                    + old_grid[(j+1)%GRID_SIZE_X][(i-1)%GRID_SIZE_Y] ;
+
+            new_grid[j][i] = decision(sum, old_grid[j][i]);
+        }
+    }
+
+    std::swap(old_grid, new_grid);
+}
+
+
 // il nous faut une vieille et une nouvelle grille
 
 int main(){
