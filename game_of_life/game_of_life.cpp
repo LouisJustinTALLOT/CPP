@@ -8,6 +8,8 @@
 
 // g++ game_of_life.cpp -o game_of_life
 
+inline int mod(int a, int b) {int ret = a%b; return ret>=0? ret: ret+b; }
+
 
 int old_grid[GRID_SIZE_Y][GRID_SIZE_X];
 int new_grid[GRID_SIZE_Y][GRID_SIZE_X];
@@ -34,14 +36,14 @@ void game_of_life(){
 
     for (int i=0; i<GRID_SIZE_Y; i++){
         for (int j=0; j<GRID_SIZE_X; j++){
-            int sum = old_grid[j][(i-1)%GRID_SIZE_Y]
-                    + old_grid[j][(i+1)%GRID_SIZE_Y]
-                    + old_grid[(j-1)%GRID_SIZE_X][i] 
-                    + old_grid[(j+1)%GRID_SIZE_X][i] 
-                    + old_grid[(j-1)%GRID_SIZE_X][(i-1)%GRID_SIZE_Y] 
-                    + old_grid[(j+1)%GRID_SIZE_X][(i+1)%GRID_SIZE_Y] 
-                    + old_grid[(j-1)%GRID_SIZE_X][(i+1)%GRID_SIZE_Y] 
-                    + old_grid[(j+1)%GRID_SIZE_X][(i-1)%GRID_SIZE_Y] ;
+            int sum = old_grid[j][mod((i-1), GRID_SIZE_Y)]
+                    + old_grid[j][mod((i+1), GRID_SIZE_Y)]
+                    + old_grid[mod((j-1), GRID_SIZE_X)][i] 
+                    + old_grid[mod((j+1), GRID_SIZE_X)][i] 
+                    + old_grid[mod((j-1), GRID_SIZE_X)][mod((i-1), GRID_SIZE_Y)] 
+                    + old_grid[mod((j+1), GRID_SIZE_X)][mod((i+1), GRID_SIZE_Y)] 
+                    + old_grid[mod((j-1), GRID_SIZE_X)][mod((i+1), GRID_SIZE_Y)] 
+                    + old_grid[mod((j+1), GRID_SIZE_X)][mod((i-1), GRID_SIZE_Y)] ;
 
             new_grid[j][i] = decision(sum, old_grid[j][i]);
         }
