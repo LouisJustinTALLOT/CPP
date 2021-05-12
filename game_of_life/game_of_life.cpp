@@ -81,7 +81,7 @@ int main(){
     old_grid[6][3] = 1;
 
     // on joue 20 fois 
-    for (int a = 0; a<20; a++){
+    for (int a = 0; a<100; a++){
         std::system("clear");
         std::cout<<"------------"<<std::endl;
         for (int i=0; i<GRID_SIZE_Y; i++){
@@ -104,7 +104,7 @@ int main(){
         usleep(50000);
         
     }
-    std::system("clear");
+    // std::system("clear");
 
 
     return 0;
