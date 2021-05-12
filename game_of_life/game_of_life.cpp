@@ -101,7 +101,7 @@ int main(){
 
         game_of_life();
 
-        sleep(1);
+        usleep(50000);
         
     }
     std::system("clear");
