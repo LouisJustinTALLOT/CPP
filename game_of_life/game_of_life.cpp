@@ -55,7 +55,7 @@ void game_of_life(){
 
 int main(){
 
-
+    // on initialise à 0
     for (int i=0; i<GRID_SIZE_Y; i++){
         for (int j=0; j<GRID_SIZE_X; j++){
             old_grid[j][i] = 0;
