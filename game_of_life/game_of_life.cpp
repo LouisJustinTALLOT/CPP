@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <unistd.h>
 
-#define GRID_SIZE_X 1000
-#define GRID_SIZE_Y 3000
+#define GRID_SIZE_X 20
+#define GRID_SIZE_Y 20
 
 // g++ game_of_life.cpp -o game_of_life
 
