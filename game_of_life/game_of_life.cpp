@@ -77,5 +77,33 @@ int main(){
     old_grid[7][3] = 1;
     old_grid[5][2] = 1;
     old_grid[6][3] = 1;
+
+    // on joue 20 fois 
+    for (int a = 0; a<20; a++){
+        std::system("clear");
+        std::cout<<"------------"<<std::endl;
+        for (int i=0; i<GRID_SIZE_Y; i++){
+            std::cout<<"|";
+
+            for (int j=0; j<GRID_SIZE_X; j++){
+                if (old_grid[j][i]){
+                   std::cout<<"#";
+                } else {
+                   std::cout<<" ";
+                }
+            }
+            std::cout<<"|"<<std::endl;
+
+        }
+        std::cout<<"------------"<<std::endl;
+
+        game_of_life();
+
+        sleep(1);
+        
+    }
+    std::system("clear");
+
+
     return 0;
 }
