@@ -61,5 +61,19 @@ int main(){
         }
     }
 
+    // valeurs initiales
+    // old_grid[2][1] = 1;
+    // old_grid[2][2] = 1;
+    // old_grid[2][3] = 1;
+
+    old_grid[0][0] = 1;
+    old_grid[9][9] = 1;
+
+
+    old_grid[7][1] = 1;
+    old_grid[7][2] = 1;
+    old_grid[7][3] = 1;
+    old_grid[5][2] = 1;
+    old_grid[6][3] = 1;
     return 0;
 }
